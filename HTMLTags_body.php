@@ -14,7 +14,9 @@ class HTMLTags {
 	 */
 	public static function register( &$parser ) {
 		// Register the hook with the parser
-		$parser->setHook( 'htmltag', array( 'HTMLTags', 'render' ) );
+		for ( $i = 0 ; $i <= 50 ; $i++ ) {
+			$parser->setHook( 'htmltag' . $i, array( 'HTMLTags', 'render' ) );
+		}
 		// Continue
 		return true;
 	}
